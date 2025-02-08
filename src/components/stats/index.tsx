@@ -1,24 +1,24 @@
+import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
+import PeopleIcon from "@mui/icons-material/People";
 import {
+  Box,
   Card,
   CardContent,
   Grid2 as Grid,
   Typography,
-  Box,
 } from "@mui/material";
-import { Bar } from "react-chartjs-2";
 import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
   BarElement,
+  CategoryScale,
+  Chart as ChartJS,
+  Legend,
+  LinearScale,
   Title,
   Tooltip,
-  Legend,
 } from "chart.js";
-import { RootState } from "../../features/store";
+import { Bar } from "react-chartjs-2";
 import { useSelector } from "react-redux";
-import PeopleIcon from "@mui/icons-material/People";
-import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
+import { RootState } from "../../features/store";
 
 ChartJS.register(
   CategoryScale,
@@ -63,12 +63,13 @@ const Stats = () => {
           sx={{
             textAlign: "center",
             p: 2,
-            boxShadow: 3,
+            boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
             height: "100%",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
+            borderRadius: 4,
           }}
         >
           <CardContent>
@@ -87,12 +88,13 @@ const Stats = () => {
           sx={{
             textAlign: "center",
             p: 2,
-            boxShadow: 3,
+            boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
             height: "100%",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
+            borderRadius: 4,
           }}
         >
           <CardContent>
@@ -110,11 +112,12 @@ const Stats = () => {
         <Card
           sx={{
             p: 2,
-            boxShadow: 3,
+            boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
             height: "420px",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
+            borderRadius: 4,
           }}
         >
           <CardContent>

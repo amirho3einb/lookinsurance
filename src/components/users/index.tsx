@@ -1,20 +1,20 @@
 import {
-  Grid2 as Grid,
-  Typography,
-  TextField,
   Box,
-  Select,
-  MenuItem,
-  InputLabel,
   FormControl,
+  Grid2 as Grid,
+  InputLabel,
+  MenuItem,
+  Select,
+  TextField,
+  Typography,
 } from "@mui/material";
 
-import { IUserDto } from "../../types/types";
-import { useSelector, useDispatch } from "react-redux";
-import { RootState, AppDispatch } from "../../features/store";
-import { useState, useEffect } from "react";
-import UserCard from "../user";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "../../features/store";
 import { filterUsers } from "../../features/userReducer";
+import { IUserDto } from "../../types/types";
+import UserCard from "../user";
 
 const UsersList = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -32,7 +32,7 @@ const UsersList = () => {
 
   return (
     <Box sx={{ my: 2 }}>
-      <Typography variant="h4" color="primary" sx={{ mb: 2 }}>
+      <Typography variant="h4" color="primary" sx={{ mb: 2, mt: 4 }}>
         Users List
       </Typography>
       <Box
@@ -51,7 +51,7 @@ const UsersList = () => {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-        <FormControl sx={{ m: 1, minWidth: 200 }}>
+        <FormControl sx={{ minWidth: 200 }}>
           <InputLabel id="country-select-label">Filter by Country</InputLabel>
           <Select
             labelId="country-select-label"

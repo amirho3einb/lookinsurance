@@ -1,9 +1,9 @@
 import { Box, Typography } from "@mui/material";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "../../features/store";
 import Stats from "../../components/stats";
 import UsersList from "../../components/users";
+import { AppDispatch, RootState } from "../../features/store";
 import { fetchUsers } from "../../features/userReducer";
 
 const Dashboard: React.FC = () => {
@@ -19,7 +19,7 @@ const Dashboard: React.FC = () => {
   return (
     <Box>
       <Typography variant="h4" color="primary" sx={{ mb: 2 }}>
-        LOOK! Insurance
+        Lookinsure
       </Typography>
       <Stats />
       <UsersList />
